@@ -8,22 +8,40 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+@import Firebase;
 
 @interface MasterViewController ()
-
-@property NSMutableArray *objects;
+    @property NSMutableArray *objects;
+    @property (strong, nonatomic) FIRDatabaseReference *ref;
 @end
 
 @implementation MasterViewController
 
+- (IBAction)refreshControl:(id)sender {
+    [self.refreshControl beginRefreshing];
+    
+    //  Refresh code for your TVC
+    [self.refreshControl endRefreshing];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    //self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    //self.viewcontroller
+    
+    
+    
+    if (!self.objects) {
+        self.objects = [[NSMutableArray alloc] init];
+    }
+    
+    self.ref = [[FIRDatabase database] reference];
+    [self refreshView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -37,12 +55,49 @@
 }
 
 - (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
+    
+    /*NSDate *currentDate = [NSDate date];
+    NSString *key = [[_ref child:@"surfs"] childByAutoId].key;
+    NSDictionary *surfObject = @{@"title": [currentDate description],
+                                 @"created_at": [currentDate description],
+                                 @"tags": @[@"words", @"go", @"here"],
+                                 @"likes": [NSNumber numberWithInt:0],
+                                 @"views": [NSNumber numberWithInt:0],
+                                 @"live": [NSNumber numberWithBool:TRUE],
+                                 @"offset": [NSNumber numberWithInt:0],
+                                 @"key": key};
+    
+    [[[_ref child:@"surfs"] child:key] setValue:surfObject];
+    
+//    [[[[_ref child:@"surfs"] child:key] child:@"title"] setValue:[currentDate description]];
+//    [[[[_ref child:@"surfs"] child:key] child:@"created_at"] setValue:[currentDate description]];
+//    [[[[_ref child:@"surfs"] child:key] child:@"tags"] setValue:@{@"test": @"1"}];
+//    [[[[_ref child:@"surfs"] child:key] child:@"likes"] setValue:0];
+//    [[[[_ref child:@"surfs"] child:key] child:@"views"] setValue:0];
+//    [[[[_ref child:@"surfs"] child:key] child:@"live"] setValue:[NSNumber numberWithBool:TRUE]];
+//    [[[[_ref child:@"surfs"] child:key] child:@"offset"] setValue:@"0,0"];
+    
+    [self.objects insertObject:surfObject atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];*/
+    
+    
+}
+
+- (void)refreshView {
+    //NSString *userID = [FIRAuth auth].currentUser.uid;
+    
+    [[_ref child:@"surfs"] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        if (![snapshot.value isEqual:[NSNull null]]) {
+            for (id key in snapshot.value) {
+                [self.objects addObject:snapshot.value[key]];
+            }
+            
+            [self.tableView reloadData];
+        }
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
 }
 
 #pragma mark - Segues
@@ -50,7 +105,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        NSDictionary *object = self.objects[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:object];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
@@ -71,8 +126,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    NSDictionary *something = self.objects[indexPath.row];
+    cell.textLabel.text = [something objectForKey:@"title"];
+    //cell.detailTextLabel.text = @"Monkey brain";
+    
     return cell;
 }
 

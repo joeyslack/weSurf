@@ -13,8 +13,10 @@
 
 @end
 
-@implementation AppDelegate
+@import UIKit;
+@import Firebase;
 
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -22,6 +24,11 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+    
+    // Setup firebase
+    [FIRApp configure];
+    //[FIRDatabase database].persistenceEnabled = YES; //https://firebase.google.com/docs/database/ios/offline-capabilities
+    
     return YES;
 }
 
