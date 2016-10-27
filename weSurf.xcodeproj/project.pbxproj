@@ -157,7 +157,7 @@
 				TargetAttributes = {
 					532279951D174D6100F7C2E0 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = CAS8L34VEY;
+						DevelopmentTeam = Q37ZV89NVE;
 						DevelopmentTeamName = "Joseph Slack";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -377,6 +377,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = weSurf/weSurf.entitlements;
+				DEVELOPMENT_TEAM = Q37ZV89NVE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Fabric/iOS\"",
@@ -414,6 +415,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = weSurf/weSurf.entitlements;
+				DEVELOPMENT_TEAM = Q37ZV89NVE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Fabric/iOS\"",
