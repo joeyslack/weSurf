@@ -85,7 +85,8 @@
 		532279981D174D6100F7C2E0 /* weSurf */ = {
 			isa = PBXGroup;
 			children = (
-				53FB689C1DC17D5B004337C1 /* weSurf.entitlements */,
+				532279A51D174D6100F7C2E0 /* Main.storyboard */,
+				532279AA1D174D6100F7C2E0 /* LaunchScreen.storyboard */,
 				5322799C1D174D6100F7C2E0 /* AppDelegate.h */,
 				5322799D1D174D6100F7C2E0 /* AppDelegate.m */,
 				5322799F1D174D6100F7C2E0 /* MasterViewController.h */,
@@ -94,11 +95,7 @@
 				532279A31D174D6100F7C2E0 /* DetailViewController.m */,
 				53FB689E1DC1814F004337C1 /* BroadcastViewController.h */,
 				53FB689F1DC1814F004337C1 /* BroadcastViewController.m */,
-				532279A51D174D6100F7C2E0 /* Main.storyboard */,
 				532279A81D174D6100F7C2E0 /* Assets.xcassets */,
-				532279AA1D174D6100F7C2E0 /* LaunchScreen.storyboard */,
-				532279AD1D174D6100F7C2E0 /* Info.plist */,
-				532279B31D174E1F00F7C2E0 /* GoogleService-Info.plist */,
 				532279991D174D6100F7C2E0 /* Supporting Files */,
 				53FB68A11DC18F34004337C1 /* StartTableViewController.h */,
 				53FB68A21DC18F34004337C1 /* StartTableViewController.m */,
@@ -109,6 +106,9 @@
 		532279991D174D6100F7C2E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				53FB689C1DC17D5B004337C1 /* weSurf.entitlements */,
+				532279B31D174E1F00F7C2E0 /* GoogleService-Info.plist */,
+				532279AD1D174D6100F7C2E0 /* Info.plist */,
 				5322799A1D174D6100F7C2E0 /* main.m */,
 			);
 			name = "Supporting Files";
