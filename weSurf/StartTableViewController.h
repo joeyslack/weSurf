@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface StartTableViewController : UITableViewController
+@property (strong, nonatomic) IBOutlet UITextField *broadcastTitle;
+@property (strong, nonatomic) IBOutlet UITextField *broadcastTags;
+@property (strong, nonatomic) IBOutlet UITextField *broadcastAuthor;
+
+- (IBAction)startBroadcast:(id)sender;
 
 @end

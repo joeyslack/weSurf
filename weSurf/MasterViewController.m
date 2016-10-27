@@ -20,6 +20,8 @@
 - (IBAction)refreshControl:(id)sender {
     [self.refreshControl beginRefreshing];
     
+    [self refreshView];
+    
     //  Refresh code for your TVC
     [self.refreshControl endRefreshing];
 }
@@ -33,8 +35,6 @@
     //self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     //self.viewcontroller
-    
-    
     
     if (!self.objects) {
         self.objects = [[NSMutableArray alloc] init];
@@ -82,6 +82,8 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];*/
     
     
+    //Do some insert stuff.
+    
 }
 
 - (void)refreshView {
@@ -89,6 +91,8 @@
     
     [[_ref child:@"surfs"] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         if (![snapshot.value isEqual:[NSNull null]]) {
+            [self.objects removeAllObjects];
+            
             for (id key in snapshot.value) {
                 [self.objects addObject:snapshot.value[key]];
             }

@@ -4,7 +4,14 @@
 # use_frameworks!
 
 target 'weSurf' do
-	pod 'Firebase'
-	pod 'FirebaseUI', '~> 0.4' 
+	#pod 'FBSDKCoreKit'
+	#pod 'FBSDKLoginKit'
+	#pod 'Firebase'
+	#pod 'FirebaseUI', '~> 0.6.2' 
+
+	pod 'Firebase/Core'
+	pod 'Firebase/Database'
+	pod 'Firebase/Messaging'
+	pod 'Firebase/Storage'
 end
 

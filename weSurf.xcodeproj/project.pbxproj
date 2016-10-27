@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		482C1F1D3ED72A0E399B9AE9 /* libPods-weSurf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC13176A6BF0781B289D2E83 /* libPods-weSurf.a */; };
 		5322799B1D174D6100F7C2E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5322799A1D174D6100F7C2E0 /* main.m */; };
 		5322799E1D174D6100F7C2E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5322799D1D174D6100F7C2E0 /* AppDelegate.m */; };
 		532279A11D174D6100F7C2E0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532279A01D174D6100F7C2E0 /* MasterViewController.m */; };
@@ -16,6 +15,9 @@
 		532279A91D174D6100F7C2E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532279A81D174D6100F7C2E0 /* Assets.xcassets */; };
 		532279AC1D174D6100F7C2E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532279AA1D174D6100F7C2E0 /* LaunchScreen.storyboard */; };
 		532279B41D174E1F00F7C2E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 532279B31D174E1F00F7C2E0 /* GoogleService-Info.plist */; };
+		53FB68A01DC18150004337C1 /* BroadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FB689F1DC1814F004337C1 /* BroadcastViewController.m */; };
+		53FB68A31DC18F34004337C1 /* StartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FB68A21DC18F34004337C1 /* StartTableViewController.m */; };
+		81D540E9FC2A29B4108A8061 /* libPods-weSurf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C801B83EF15B54653D724C /* libPods-weSurf.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +34,14 @@
 		532279AB1D174D6100F7C2E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		532279AD1D174D6100F7C2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		532279B31D174E1F00F7C2E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AB203FD3BA7E625F822F4E21 /* Pods-weSurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weSurf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weSurf/Pods-weSurf.debug.xcconfig"; sourceTree = "<group>"; };
-		B80E8CA2353646464829D8B0 /* Pods-weSurf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weSurf.release.xcconfig"; path = "Pods/Target Support Files/Pods-weSurf/Pods-weSurf.release.xcconfig"; sourceTree = "<group>"; };
-		CC13176A6BF0781B289D2E83 /* libPods-weSurf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weSurf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FB689C1DC17D5B004337C1 /* weSurf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = weSurf.entitlements; sourceTree = "<group>"; };
+		53FB689E1DC1814F004337C1 /* BroadcastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadcastViewController.h; sourceTree = "<group>"; };
+		53FB689F1DC1814F004337C1 /* BroadcastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BroadcastViewController.m; sourceTree = "<group>"; };
+		53FB68A11DC18F34004337C1 /* StartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartTableViewController.h; sourceTree = "<group>"; };
+		53FB68A21DC18F34004337C1 /* StartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartTableViewController.m; sourceTree = "<group>"; };
+		7189291395C7D083C0B32DF7 /* Pods-weSurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weSurf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weSurf/Pods-weSurf.debug.xcconfig"; sourceTree = "<group>"; };
+		B9C801B83EF15B54653D724C /* libPods-weSurf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weSurf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDBDB4663A5330BA3DB3B05B /* Pods-weSurf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weSurf.release.xcconfig"; path = "Pods/Target Support Files/Pods-weSurf/Pods-weSurf.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,20 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				482C1F1D3ED72A0E399B9AE9 /* libPods-weSurf.a in Frameworks */,
+				81D540E9FC2A29B4108A8061 /* libPods-weSurf.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D9AA1C6103551C58E677CD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9C801B83EF15B54653D724C /* libPods-weSurf.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5322798D1D174D6100F7C2E0 = {
 			isa = PBXGroup;
 			children = (
 				532279981D174D6100F7C2E0 /* weSurf */,
 				532279971D174D6100F7C2E0 /* Products */,
-				CF00728F2B990DC810619C91 /* Pods */,
-				61D105C43203F8DCB2463FAE /* Frameworks */,
+				8D5F291A51A08D7605AE08FB /* Pods */,
+				2D9AA1C6103551C58E677CD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,18 +85,23 @@
 		532279981D174D6100F7C2E0 /* weSurf */ = {
 			isa = PBXGroup;
 			children = (
+				53FB689C1DC17D5B004337C1 /* weSurf.entitlements */,
 				5322799C1D174D6100F7C2E0 /* AppDelegate.h */,
 				5322799D1D174D6100F7C2E0 /* AppDelegate.m */,
 				5322799F1D174D6100F7C2E0 /* MasterViewController.h */,
 				532279A01D174D6100F7C2E0 /* MasterViewController.m */,
 				532279A21D174D6100F7C2E0 /* DetailViewController.h */,
 				532279A31D174D6100F7C2E0 /* DetailViewController.m */,
+				53FB689E1DC1814F004337C1 /* BroadcastViewController.h */,
+				53FB689F1DC1814F004337C1 /* BroadcastViewController.m */,
 				532279A51D174D6100F7C2E0 /* Main.storyboard */,
 				532279A81D174D6100F7C2E0 /* Assets.xcassets */,
 				532279AA1D174D6100F7C2E0 /* LaunchScreen.storyboard */,
 				532279AD1D174D6100F7C2E0 /* Info.plist */,
 				532279B31D174E1F00F7C2E0 /* GoogleService-Info.plist */,
 				532279991D174D6100F7C2E0 /* Supporting Files */,
+				53FB68A11DC18F34004337C1 /* StartTableViewController.h */,
+				53FB68A21DC18F34004337C1 /* StartTableViewController.m */,
 			);
 			path = weSurf;
 			sourceTree = "<group>";
@@ -94,19 +114,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		61D105C43203F8DCB2463FAE /* Frameworks */ = {
+		8D5F291A51A08D7605AE08FB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CC13176A6BF0781B289D2E83 /* libPods-weSurf.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CF00728F2B990DC810619C91 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AB203FD3BA7E625F822F4E21 /* Pods-weSurf.debug.xcconfig */,
-				B80E8CA2353646464829D8B0 /* Pods-weSurf.release.xcconfig */,
+				7189291395C7D083C0B32DF7 /* Pods-weSurf.debug.xcconfig */,
+				EDBDB4663A5330BA3DB3B05B /* Pods-weSurf.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -118,12 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 532279B01D174D6100F7C2E0 /* Build configuration list for PBXNativeTarget "weSurf" */;
 			buildPhases = (
-				B17386C0D9D66C4E922F7A5C /* Check Pods Manifest.lock */,
+				C43AEFC017621E12488F3B30 /* [CP] Check Pods Manifest.lock */,
 				532279921D174D6100F7C2E0 /* Sources */,
 				532279931D174D6100F7C2E0 /* Frameworks */,
 				532279941D174D6100F7C2E0 /* Resources */,
-				A018D0865718BA64C829C6BE /* Embed Pods Frameworks */,
-				4F4037BF71F7AAAD900AD680 /* Copy Pods Resources */,
+				7BF5FD6E8404350FF9635DDD /* [CP] Embed Pods Frameworks */,
+				38DF2BD762E606A6F87E4EB5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +160,11 @@
 						DevelopmentTeam = CAS8L34VEY;
 						DevelopmentTeamName = "Joseph Slack";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -184,14 +201,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4F4037BF71F7AAAD900AD680 /* Copy Pods Resources */ = {
+		38DF2BD762E606A6F87E4EB5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,14 +216,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weSurf/Pods-weSurf-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A018D0865718BA64C829C6BE /* Embed Pods Frameworks */ = {
+		7BF5FD6E8404350FF9635DDD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,19 +231,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weSurf/Pods-weSurf-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B17386C0D9D66C4E922F7A5C /* Check Pods Manifest.lock */ = {
+		C43AEFC017621E12488F3B30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -237,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5322799E1D174D6100F7C2E0 /* AppDelegate.m in Sources */,
+				53FB68A01DC18150004337C1 /* BroadcastViewController.m in Sources */,
+				53FB68A31DC18F34004337C1 /* StartTableViewController.m in Sources */,
 				532279A11D174D6100F7C2E0 /* MasterViewController.m in Sources */,
 				5322799B1D174D6100F7C2E0 /* main.m in Sources */,
 				532279A41D174D6100F7C2E0 /* DetailViewController.m in Sources */,
@@ -353,24 +372,72 @@
 		};
 		532279B11D174D6100F7C2E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB203FD3BA7E625F822F4E21 /* Pods-weSurf.debug.xcconfig */;
+			baseConfigurationReference = 7189291395C7D083C0B32DF7 /* Pods-weSurf.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = weSurf/weSurf.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Fabric/iOS\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseStorage/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseDatabaseUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseStorageUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseTwitterAuthUI/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleSignIn/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/TwitterCore/iOS\"",
+					"\"${PODS_ROOT}/TwitterKit/iOS\"",
+				);
 				INFOPLIST_FILE = weSurf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = messages.weSurf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flareapp.wesurf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		532279B21D174D6100F7C2E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B80E8CA2353646464829D8B0 /* Pods-weSurf.release.xcconfig */;
+			baseConfigurationReference = EDBDB4663A5330BA3DB3B05B /* Pods-weSurf.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = weSurf/weSurf.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Fabric/iOS\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseStorage/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseDatabaseUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseStorageUI/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseTwitterAuthUI/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleSignIn/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/TwitterCore/iOS\"",
+					"\"${PODS_ROOT}/TwitterKit/iOS\"",
+				);
 				INFOPLIST_FILE = weSurf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = messages.weSurf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flareapp.wesurf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
