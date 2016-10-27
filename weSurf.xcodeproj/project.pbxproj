@@ -89,16 +89,16 @@
 				532279AA1D174D6100F7C2E0 /* LaunchScreen.storyboard */,
 				5322799C1D174D6100F7C2E0 /* AppDelegate.h */,
 				5322799D1D174D6100F7C2E0 /* AppDelegate.m */,
+				53FB689E1DC1814F004337C1 /* BroadcastViewController.h */,
+				53FB689F1DC1814F004337C1 /* BroadcastViewController.m */,
 				5322799F1D174D6100F7C2E0 /* MasterViewController.h */,
 				532279A01D174D6100F7C2E0 /* MasterViewController.m */,
 				532279A21D174D6100F7C2E0 /* DetailViewController.h */,
 				532279A31D174D6100F7C2E0 /* DetailViewController.m */,
-				53FB689E1DC1814F004337C1 /* BroadcastViewController.h */,
-				53FB689F1DC1814F004337C1 /* BroadcastViewController.m */,
-				532279A81D174D6100F7C2E0 /* Assets.xcassets */,
-				532279991D174D6100F7C2E0 /* Supporting Files */,
 				53FB68A11DC18F34004337C1 /* StartTableViewController.h */,
 				53FB68A21DC18F34004337C1 /* StartTableViewController.m */,
+				532279A81D174D6100F7C2E0 /* Assets.xcassets */,
+				532279991D174D6100F7C2E0 /* Supporting Files */,
 			);
 			path = weSurf;
 			sourceTree = "<group>";

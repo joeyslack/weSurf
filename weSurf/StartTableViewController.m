@@ -7,9 +7,10 @@
 //
 
 #import "StartTableViewController.h"
+@import Firebase;
 
 @interface StartTableViewController ()
-
+     @property (strong, nonatomic) FIRDatabaseReference *ref;
 @end
 
 @implementation StartTableViewController
@@ -96,6 +97,30 @@
 
 - (IBAction)startBroadcast:(id)sender {
     NSLog(@"WHATS UP");
+    
+    NSLog(@"AAA: %@", [_broadcastTitle text]);
+    NSLog(@"AAA: %@", [_broadcastTags text]);
+    NSLog(@"AAA: %@", [_broadcastAuthor text]);
+    NSLog(@"AAA: %@", [[_broadcastTags text] componentsSeparatedByString:@" "]);
+    
+    
+    NSDate *currentDate = [NSDate date];
+    NSString *key = [[_ref child:@"surfs"] childByAutoId].key;
+    NSDictionary *surfObject = @{@"title": [currentDate description],
+                              @"created_at": [currentDate description],
+                              //@"tags": [[_broadcastTags text] componentsSeparatedByString:@" "],
+                              //@"likes": [NSNumber numberWithInt:0],
+                              //@"views": [NSNumber numberWithInt:0],
+                              //@"live": [NSNumber numberWithBool:TRUE],
+                              //@"offset": [NSNumber numberWithInt:0],
+                              //@"author": [_broadcastAuthor text],
+                              @"key": key};
+    
+    NSLog(@"SETION: %@", surfObject);
+     
+     [[[_ref child:@"surfs"] child:key] setValue:surfObject];
+
+    
 }
 
 
