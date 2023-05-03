@@ -13,5 +13,8 @@ target 'weSurf' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Messaging'
 	pod 'Firebase/Storage'
+
+	pod 'DZNWebViewController'
+	pod 'KINWebBrowser'
 end
 

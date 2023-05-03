@@ -7,6 +7,8 @@
 //
 
 #import "StartTableViewController.h"
+#import "DZNWebViewController.h"
+#import "BroadcastViewController.h"
 @import Firebase;
 
 @interface StartTableViewController ()
@@ -96,20 +98,34 @@
 }
 */
 
+
+// Start the broadcast button
+// TODO: Add some type of form validation for this step
 - (IBAction)startBroadcast:(id)sender {
+    
+    // Add new "surf" entry in firebase
     NSDate *currentDate = [NSDate date];
     NSString *key = [[_ref child:@"surfs"] childByAutoId].key;
     NSDictionary *surfObject = @{@"title": [_broadcastTitle text],
-                              @"created_at": [currentDate description],
-                              @"tags": [[_broadcastTags text] componentsSeparatedByString:@" "],
-                              @"likes": [NSNumber numberWithInt:0],
-                              @"views": [NSNumber numberWithInt:0],
-                              @"live": [NSNumber numberWithBool:TRUE],
-                              @"offset": [NSNumber numberWithInt:0],
-                              @"author": [_broadcastAuthor text],
-                              @"key": key};
+                                 @"created_at": [currentDate description],
+                                 @"tags": [[_broadcastTags text] componentsSeparatedByString:@" "],
+                                 @"likes": [NSNumber numberWithInt:0],
+                                 @"views": [NSNumber numberWithInt:0],
+                                 @"live": [NSNumber numberWithBool:TRUE],
+                                 @"offset": [NSNumber numberWithInt:0],
+                                 @"author": [_broadcastAuthor text],
+                                 @"key": key};
     
     [[[_ref child:@"surfs"] child:key] setValue:surfObject];
+    
+    
+    BroadcastViewController *bvc = [[BroadcastViewController alloc] initWithKey:key];
+    [self.navigationController pushViewController:bvc animated:NO];
+    
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //BroadcastViewController *myVC = (BroadcastViewController *)[storyboard instantiateViewControllerWithIdentifier:@"myViewCont"];
+
+    
 }
 
 @end

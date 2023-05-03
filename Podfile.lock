@@ -1,4 +1,6 @@
 PODS:
+  - ARChromeActivity (1.0.5)
+  - DZNWebViewController (3.2)
   - Firebase/Core (3.8.0):
     - FirebaseAnalytics (= 3.5.1)
     - FirebaseCore (= 3.4.4)
@@ -41,14 +43,22 @@ PODS:
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - KINWebBrowser (1.3.2):
+    - ARChromeActivity (= 1.0.5)
+    - TUSafariActivity (= 1.0.4)
+  - TUSafariActivity (1.0.4)
 
 DEPENDENCIES:
+  - DZNWebViewController
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - KINWebBrowser
 
 SPEC CHECKSUMS:
+  ARChromeActivity: 821c7849b566f49583987468733a896fee35aa4d
+  DZNWebViewController: 8e927a5de637fe0c4104c001d5cccd4fa5621e50
   Firebase: fdbecadb7b5cbef2774852d4fa659b9daf11f2af
   FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
   FirebaseCore: d0ed25f27b6f9158eccc439f1be6f92e81207e28
@@ -60,7 +70,9 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  KINWebBrowser: 27aa857a2aa39063ed102cca781d130b679d205f
+  TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
 
-PODFILE CHECKSUM: 033790073da97186d6e49b4573aa206d00b86ef7
+PODFILE CHECKSUM: ed1bcc43f3138575acebc7a3ce1ba09a2f7abd0a
 
 COCOAPODS: 1.1.1

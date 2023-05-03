@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <KINWebBrowser/KINWebBrowserViewController.h>
 
-@interface BroadcastViewController : UIViewController
+@interface BroadcastViewController : UIViewController <KINWebBrowserDelegate, UISearchBarDelegate, UIScrollViewDelegate>
+
+- (id) initWithKey:(NSString *)key;
 
 @end
